@@ -39,9 +39,12 @@ body{
     background-color: rgb(50, 194, 194);
 }
 
-.greetings{
-    font-size: 7rem;
-    font-weight: 900;
+.greetings {
+  font-size: 7rem;
+  font-weight: 900;
+  margin: 0;            /* Elimina cualquier margen predeterminado */
+  padding: 0;           /* Elimina relleno si lo hay */
+  line-height: 0.5;       /* Reduce espacio entre líneas */
 }
 .greetings > span{
     animation: glow 2.5s ease-in-out infinite;
