@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/Minecraft.ttf') format('truetype'); /* Ajusta la ruta según tu estructura */
+}
+
+* {
+  font-family: 'Minecraft', sans-serif;
+}
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-*{
-  font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 *::after,
@@ -32,7 +34,7 @@ body {
 }
 
 #lyrics {
-  font-size: 35px;
+  font-size: 1.5rem;
   color: white;
   position: absolute;
   margin-bottom: 20%;
@@ -40,15 +42,7 @@ body {
   font-weight: bold;
   letter-spacing: 4px;
 }
-@media only screen and (max-width: 600px) {
-  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
-  #lyrics {
-      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
-      margin-bottom: 530px;
-      letter-spacing: 3px;
-  }
 
-}
 .titulo {
   margin-bottom: 50px;
   color: rgb(66, 244, 111);
@@ -59,7 +53,7 @@ body {
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
    z-index: 9999; /* Muy por delante de otros elementos */
-  font-size: 40px;
+  font-size: 1.5rem;
 }
 @keyframes fadeIn {
   from {
@@ -69,7 +63,20 @@ body {
     opacity: 1;
   }
 }
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+  #lyrics {
+      font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
+      margin-bottom: 400px;
+      letter-spacing: 3px;
+      text-align: center; /* Centra el texto */
+  }
+  .titulo {
+      font-size: 15px; /* Ajusta el tamaño del título para dispositivos más pequeños */
+      margin-bottom: 30px; /* Reduce el margen inferior */
+  }
 
+}
 .night {
   z-index: -1;
   position: absolute;
